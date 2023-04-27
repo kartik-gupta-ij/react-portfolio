@@ -43,7 +43,7 @@ export default function FullWidthGrid() {
                 Kartik Gupta
               </Typography>
               <Typography level="h5" backgroundColor={'var(--onyx)'}>
-                Web Developer
+                Web Developer 
               </Typography>
             </Grid>
 
