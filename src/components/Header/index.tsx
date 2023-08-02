@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
   createStyles,
   Header as MantineHeader,
@@ -90,43 +90,43 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const links =  [
-  {
-    "link": "/about",
-    "label": "Home"
-  },
-  {
-    "link": "/learn",
-    "label": "Features"
-  },
-  {
-    "link": "/pricing",
-    "label": "Pricing"
-  }
-];
+// const links =  [
+//   {
+//     "link": "/about",
+//     "label": "Home"
+//   },
+//   {
+//     "link": "/learn",
+//     "label": "Features"
+//   },
+//   {
+//     "link": "/pricing",
+//     "label": "Pricing"
+//   }
+// ];
 
 export default function Header() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
-  const { classes, cx } = useStyles();
+  // const [active, setActive] = useState(links[0].link);
+  const { classes } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
+  // const items = links.map((link) => (
+  //   <a
+  //     key={link.label}
+  //     href={link.link}
+  //     className={cx(classes.link, {
+  //       [classes.linkActive]: active === link.link,
+  //     })}
+  //     onClick={(event) => {
+  //       event.preventDefault();
+  //       setActive(link.link);
+  //     }}
+  //   >
+  //     {link.label}
+  //   </a>
+  // ));
 
-  const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link, {
-        [classes.linkActive]: active === link.link,
-      })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
-    >
-      {link.label}
-    </a>
-  ));
 
   return (
     <MantineHeader height={56} mb={120} withBorder>
