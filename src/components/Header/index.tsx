@@ -14,10 +14,10 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import {
   IconBrandTwitter,
-  IconBrandYoutube,
-  IconBrandInstagram,
   IconSun,
   IconMoonStars,
+  IconBrandLinkedin,
+  IconBrandGithub,
 } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
@@ -147,14 +147,14 @@ export default function Header() {
         </Group>
 
         <Group spacing={15} className={classes.social} position="right" noWrap>
-          <ActionIcon variant="light" color="blue">
+        <ActionIcon variant="light" color="blue"  component="a" href="https://github.com/kartik-gupta-ij" target='_blank'>
+            <IconBrandGithub size="1.1rem" stroke={1.5} />
+          </ActionIcon>
+          <ActionIcon variant="light" color="blue" component="a" href="https://www.linkedin.com/in/kartik-gupta-ij" target='_blank'>
+            <IconBrandLinkedin size="1.1rem" stroke={1.5} />
+          </ActionIcon>
+          <ActionIcon variant="light" color="blue"  component="a" href="https://twitter.com/kartik_gupta_ij" target='_blank'>
             <IconBrandTwitter size="1.1rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon variant="light" color="blue">
-            <IconBrandYoutube size="1.1rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon variant="light" color="blue">
-            <IconBrandInstagram size="1.1rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon
             variant="light"
