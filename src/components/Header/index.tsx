@@ -129,7 +129,7 @@ export default function Header() {
 
 
   return (
-    <MantineHeader height={56} mb={120} withBorder>
+    <MantineHeader height={56}  withBorder>
       <Container className={classes.inner}>
         <Burger
           opened={opened}
