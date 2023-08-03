@@ -5,13 +5,11 @@ import {
   Group,
   ActionIcon,
   Container,
-  Burger,
   rem,
   useMantineColorScheme,
   Text,
   Image,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
 import {
   IconBrandTwitter,
   IconSun,
@@ -106,7 +104,7 @@ const useStyles = createStyles((theme) => ({
 // ];
 
 export default function Header() {
-  const [opened, { toggle }] = useDisclosure(false);
+  // const [opened, { toggle }] = useDisclosure(false);
   // const [active, setActive] = useState(links[0].link);
   const { classes } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
