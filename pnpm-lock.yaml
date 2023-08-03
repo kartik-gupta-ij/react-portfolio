@@ -29,6 +29,9 @@ dependencies:
   react-router-dom:
     specifier: ^6.14.2
     version: 6.14.2(react-dom@18.2.0)(react@18.2.0)
+  react-seo-component:
+    specifier: ^2.0.2
+    version: 2.0.2(react-helmet@6.0.0)(react@18.2.0)
 
 devDependencies:
   '@types/react':
@@ -2047,6 +2050,22 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-fast-compare@2.0.4:
+    resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
+    dev: false
+
+  /react-helmet@6.0.0(react@18.2.0):
+    resolution: {integrity: sha512-My6S4sa0uHN/IuVUn0HFmasW5xj9clTkB9qmMngscVycQ5vVG51Qp44BEvLJ4lixupTwDlU9qX1/sCrMN4AEPg==}
+    peerDependencies:
+      react: '>=16.3.0'
+    dependencies:
+      object-assign: 4.1.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-fast-compare: 2.0.4
+      react-side-effect: 2.1.2(react@18.2.0)
+    dev: false
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
@@ -2111,6 +2130,25 @@ packages:
       react: '>=16.8'
     dependencies:
       '@remix-run/router': 1.7.2
+      react: 18.2.0
+    dev: false
+
+  /react-seo-component@2.0.2(react-helmet@6.0.0)(react@18.2.0):
+    resolution: {integrity: sha512-OQmrWcOn15ST9oBOfpWHrDwXKELw6ztAblHpTPdL2xmlOWazfZ13Nk6X/+LC7bEcFxGt5Tq6731OnZ35atG0Kg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-helmet: 6.0.0
+    dependencies:
+      react: 18.2.0
+      react-helmet: 6.0.0(react@18.2.0)
+    dev: false
+
+  /react-side-effect@2.1.2(react@18.2.0):
+    resolution: {integrity: sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw==}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.0 || ^18.0.0
+    dependencies:
       react: 18.2.0
     dev: false
 

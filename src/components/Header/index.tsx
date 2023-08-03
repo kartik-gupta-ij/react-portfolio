@@ -33,11 +33,11 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    width: rem(260),
+    // width: rem(260),
 
-    [theme.fn.smallerThan("sm")]: {
-      display: "none",
-    },
+    // [theme.fn.smallerThan("sm")]: {
+    //   display: "none",
+    // },
   },
 
   social: {
@@ -131,17 +131,16 @@ export default function Header() {
   return (
     <MantineHeader height={56}  withBorder>
       <Container className={classes.inner}>
-        <Burger
+        {/* <Burger
           opened={opened}
           onClick={toggle}
           size="sm"
           className={classes.burger}
-        />
+        /> */}
 
         <Group className={classes.links} spacing={5}>
           <Image maw={60} src={"./handy-meditating-cloud.gif"} />
-
-           <Text size="lg" weight={700} color={dark ? "lightGray" : "black"}>
+           <Text size="lg" weight={700} color={dark ? "lightGray" : "black"} >
              @kartik-gupta-ij
           </Text>
         </Group>

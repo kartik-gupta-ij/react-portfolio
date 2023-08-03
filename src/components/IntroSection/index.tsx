@@ -11,6 +11,7 @@ import {
   rem,
   Anchor,
   Grid,
+  Code,
 } from "@mantine/core";
 import { IconStarFilled } from "@tabler/icons-react";
 import image from "/pablita-social-network-1.gif";
@@ -27,7 +28,6 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     color: theme.colorScheme === "dark" ? theme.white : theme.black,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: rem(35),
     lineHeight: 1.2,
     fontWeight: 900,
@@ -55,9 +55,12 @@ export default function HeroBullets() {
     <div>
       <Container>
         <Grid className={classes.inner}>
-          <Grid.Col sm={7}>
+        <Grid.Col sm={5} orderSm={2}>
+            <Image src={image} className={classes.image} />
+          </Grid.Col>
+          <Grid.Col sm={7} orderSm={1}>
             
-              <Text color="dimmed" mt="md">
+              <Text  mt="md">
                 Hi, There 👋 I’m
               </Text>
               <Title className={classes.title}>
@@ -78,7 +81,7 @@ export default function HeroBullets() {
                   Web.
                 </Text>
               </Title>
-              <Text color="dimmed" mt="md">
+              <Text  mt="md">
                 I’m a software engineer specializing in building (and
                 occasionally designing) exceptional digital experiences.
                 Currently, I’m focused on building accessible, human-centered
@@ -116,23 +119,17 @@ export default function HeroBullets() {
               </List>
 
               <Group mt={30}>
-                <Button radius="xl" size="md" className={classes.control}>
-                  Get started
+                <Button  radius="md" size="lg" className={classes.control} variant="gradient" gradient={{ from: "teal", to: "indigo", deg: 45 }}>
+                  Discover Works
                 </Button>
-                <Button
-                  variant="default"
-                  radius="xl"
-                  size="md"
-                  className={classes.control}
-                >
-                  Source code
-                </Button>
+               
               </Group>
+              <Text color="dimmed" mt="md" >
+                 Or press <Code>⌘</Code>/<Code> Ctrl + K</Code> to discover more
+              </Text>
     
           </Grid.Col>
-          <Grid.Col sm={5}>
-            <Image src={image} className={classes.image} />
-          </Grid.Col>
+         
         </Grid>
         <div></div>
       </Container>
