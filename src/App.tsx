@@ -1,6 +1,5 @@
 import Home from "./pages/Home";
 import ThemeProvider from "@/theme/ThemeProvider";
-import Seo from "@/components/Seo";
 import {
   SpotlightProvider,
   SpotlightAction,
@@ -110,6 +109,7 @@ function ActionsWrapper({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
+    
     <ThemeProvider>
       <SpotlightProvider
         actions={actions}
@@ -119,7 +119,6 @@ function App() {
         nothingFoundMessage="Nothing found..."
         actionsWrapperComponent={ActionsWrapper}
       >
-        <Seo />
         <Home />
       </SpotlightProvider>
     </ThemeProvider>
