@@ -1,6 +1,5 @@
 import { Box, createStyles, keyframes } from "@mantine/core";
-import { useMouse } from "@mantine/hooks";
-import {  useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 
 export const bounce = keyframes({
   "from, 20%, 53%, 80%, to": { transform: "translate3d(0, 0, 0)" },
@@ -11,14 +10,14 @@ export const bounce = keyframes({
 
 export const spin = keyframes({
   "0%": { transform: "rotate(0deg)" },
-  "50%": { scale: " 1 1.3" },
+  "50%": { scale: " 1 1.5" },
   "100%": { transform: "rotate(360deg)" },
 });
 
 const useStyles = createStyles((theme) => ({
   Blob: {
     backgroundColor: "white",
-    height: "34em",
+    height: "34vmax",
     aspectRatio: "1",
     position: "fixed",
     left: " 50%",
@@ -28,56 +27,56 @@ const useStyles = createStyles((theme) => ({
     background:
       theme.colorScheme === "dark"
         ? " linear-gradient(to right, aquamarine, mediumpurple)"
-        : " linear-gradient(to right, pink, mediumpurple)",
-    animation: `${spin} 20s infinite`,
-    opacity: 0.8,
-    zIndex: -4,
+        : " linear-gradient(to right, pink, blue)",
+    animation: `${spin} 10s infinite`,
+    opacity: theme.colorScheme === "dark" ? 0.6 : 0.4,
+    zIndex: -2,
   },
   blur: {
     width: "100vw",
     zIndex: -1,
     height: "100vh",
     position: "fixed",
-    backdropFilter: "blur(12vmax)",
+    backdropFilter: "blur(10vmax)",
     top: 0,
   },
-  postion: {
-    position: "absolute",
-    width: "100vw",
-    height: "100vh",
-    zIndex: 1,
-    },
 }));
 
-export default function HoverAnmiations() {
+export default function HoverAnmiations(prop: {
+  children?: ReactNode;
+  x: number;
+  y: number;
+}) {
   const { classes } = useStyles();
-    const{ ref,x,y}=useMouse();
+  
   const ref2 = useRef(null);
 
   useEffect(() => {
-    console.log("ref2", ref2);
+    console.log("ref2", prop.x, prop.y);
     if (ref2.current) {
       const blob = ref2.current as any;
 
-      blob.animate(
-        {
-          left: `${x}px`,
-          top: `${y}px`,
-        },
-        { duration: 3000, fill: "forwards" }
-      );
+      blob.style.left = `${prop.x}px`;
+      blob.style.top = `${prop.y}px`;
+      blob.style.transition = "all 0.6s ease-out";
+
+
+      // not working in safari
+      // blob.animate(
+      //   {
+      //     left: `${prop.x}px`,
+      //     top: `${prop.y}px`,
+      //   },
+      //   { duration: 3000, fill: "forwards" }
+      // );
     }
-  }, [ref2, x]);
+  }, [ref2, prop.x]);
 
   return (
     <>
-    <Box className={classes.postion} ref={ref}>
-    </Box>
     <Box className={classes.blur} >
-
     </Box>
     <div className={classes.Blob} ref={ref2}></div>
-
     </>
   );
 }
