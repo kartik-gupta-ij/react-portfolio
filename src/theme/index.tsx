@@ -7,7 +7,7 @@ const myTheme: MantineThemeOverride = {
   colors: {
     purple: ["#C350C0","rgb(123, 31, 162)"],
     dark:[
-      '#d5d7e0',
+      '#FFFFFF',
       '#acaebf',
       '#8c8fa3',
       '#666980',

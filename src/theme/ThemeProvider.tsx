@@ -19,7 +19,7 @@ type Props = {
 export default function ThemeProvider(props: Props) {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: "mantine-color-scheme",
-    defaultValue: "light",
+    defaultValue: "dark",
   });
   useHotkeys([["shift+J", () => toggleColorScheme()]]);
 

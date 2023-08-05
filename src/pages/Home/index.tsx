@@ -1,3 +1,4 @@
+import About from "@/components/AboutSection";
 import Header from "@/components/Header";
 import HoverAnmiations from "@/components/HoverAnmiations";
 
@@ -38,6 +39,7 @@ export default function Home() {
         <Box className={classes.innerContainer}  >
           <Header />
           <IntroSection/>
+          <About />
           <IntroSection />
           <IntroSection />
           <IntroSection />

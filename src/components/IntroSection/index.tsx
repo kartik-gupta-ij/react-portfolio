@@ -78,6 +78,13 @@ const rotate180 = keyframes({
 });
 
 const useStyles = createStyles((theme) => ({
+  container:{
+      minWidth:"100vw"
+      ,minHeight:"100vh",
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center",
+  },
   inner: {
     display: "flex",
     justifyContent: "space-between",
@@ -86,6 +93,11 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: theme.spacing.xl,
     paddingRight: theme.spacing.xl,
   },
+  imageContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    },
 
   title: {
     color: theme.colorScheme === "dark" ? theme.white : theme.black,
@@ -198,14 +210,14 @@ export default function HeroBullets() {
     },[]
 )
   return (
-    <div>
+    <div className={classes.container}>
       <Container>
         <Grid className={classes.inner}>
-          <Grid.Col sm={5} orderSm={2}>
+          <Grid.Col sm={5} orderSm={2} className={classes.imageContainer}>
             <Image src={image} className={classes.image} />
           </Grid.Col>
           <Grid.Col sm={7} orderSm={1}>
-            <Text mt="md">Hi, There 👋 I’m</Text>
+            <Text>Hi, There 👋 I’m</Text>
             <Title className={classes.title}>
               <Text>
                 <span className={magic} ref={starSpan}>
@@ -237,7 +249,7 @@ export default function HeroBullets() {
                 Web.
               </Text>
             </Title>
-            <Text mt="md">
+            <Text mt="md" >
               I’m a software engineer specializing in building (and occasionally
               designing) exceptional digital experiences. Currently, I’m focused
               on building accessible, human-centered products at{" "}
@@ -266,7 +278,7 @@ export default function HeroBullets() {
                 <b>Web Devloper at Qdrant</b>
               </List.Item>
               <List.Item>
-                <b>Member at coding club</b>
+                <b>Member at Coding Club</b>
               </List.Item>
               <List.Item>
                 <b>Student at Unversity of Lucknow</b>
