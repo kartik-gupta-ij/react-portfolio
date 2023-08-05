@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
       theme.colorScheme === "dark"
         ? " linear-gradient(to right, aquamarine, mediumpurple)"
         : " linear-gradient(to right, pink, blue)",
-    animation: `${spin} 10s infinite`,
+    animation: `${spin} 5s infinite`,
     opacity: theme.colorScheme === "dark" ? 0.6 : 0.4,
     zIndex: -2,
   },
@@ -52,7 +52,6 @@ export default function HoverAnmiations(prop: {
   const ref2 = useRef(null);
 
   useEffect(() => {
-    console.log("ref2", prop.x, prop.y);
     if (ref2.current) {
       const blob = ref2.current as any;
 

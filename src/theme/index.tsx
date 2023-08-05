@@ -5,7 +5,7 @@ const myTheme: MantineThemeOverride = {
   defaultRadius: "md",
   fontFamily: '"Clash Display", sans-serif',
   colors: {
-    purple: ["#C350C0"],
+    purple: ["#C350C0","rgb(123, 31, 162)"],
     dark:[
       '#d5d7e0',
       '#acaebf',
@@ -36,6 +36,7 @@ const myTheme: MantineThemeOverride = {
       darkPurple: "linear-gradient(90deg, #7028E4 0%, #E5B2CA 100%)",
       lightBlue: "linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)",
       darkBlue: "linear-gradient(90deg, #1D4350 0%, #A43931 100%)",
+      purpleVioletPink: "linear-gradient(to right,rgb(123, 31, 162),rgb(103, 58, 183),rgb(244, 143, 177),rgb(123, 31, 162))"
     }
   },
 };
