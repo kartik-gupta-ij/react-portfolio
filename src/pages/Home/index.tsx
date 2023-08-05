@@ -1,4 +1,5 @@
 import About from "@/components/AboutSection";
+import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import HoverAnmiations from "@/components/HoverAnmiations";
 
@@ -34,18 +35,17 @@ export default function Home() {
   return (
     <>
       <HoverAnmiations x={x} y={y} />
-      <Box sx={{position:"fixed" ,height:"100vh", width:"100vw"}}ref={ref}></Box>
+      <Box sx={{position:"fixed" ,height:"100vh", width:"100vw",zIndex:0}}ref={ref}></Box>
       <Box className={classes.container} >
         <Box className={classes.innerContainer}  >
           <Header />
           <IntroSection/>
           <About />
-          <IntroSection />
+          <Experience/>
           <IntroSection />
           <IntroSection />
         </Box>
       </Box>
-      
     </>
   );
 }
