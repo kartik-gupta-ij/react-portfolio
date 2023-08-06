@@ -273,6 +273,13 @@ export default function HeroBullets() {
                   <IconStarFilled size={rem(12)} stroke={1.5} />
                 </ThemeIcon>
               }
+              sx={{"& .mantine-List-itemWrapper":{
+               
+                alignItems: "center !important",
+         
+              }
+            
+              }}
             >
               <List.Item>
                 <b>Web Devloper at Qdrant</b>

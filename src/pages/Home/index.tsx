@@ -6,7 +6,7 @@ import HoverAnmiations from "@/components/HoverAnmiations";
 import IntroSection from "@/components/IntroSection";
 import Project from "@/components/ProjectSection";
 import { Box, createStyles } from "@mantine/core";
-import { useMouse } from "@mantine/hooks";
+import { useEffect, useState } from "react";
 
 const useStyles = createStyles(() => ({
   container: {
@@ -28,11 +28,25 @@ const useStyles = createStyles(() => ({
 
 export default function Home() {
   const { classes } = useStyles();
-  const { ref, x, y } = useMouse();
+  const [mousePos, setMousePos] = useState({x:0,y:0});
+
+  useEffect(() => {
+    const handleMouseMove = (event:any) => {
+      setMousePos({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener(
+        'mousemove',
+        handleMouseMove
+      );
+    };
+  }, []);
   return (
     <>
-      <HoverAnmiations x={x} y={y} />
-      <Box sx={{position:"fixed" ,height:"100vh", width:"100vw",zIndex:0}}ref={ref}></Box>
+      <HoverAnmiations x={mousePos.x} y={mousePos.y} />
       <Box className={classes.container} >
         <Box className={classes.innerContainer}  >
           <Header />
@@ -40,7 +54,7 @@ export default function Home() {
           <About />
           <Experience/>
           <Project />
-          <IntroSection />
+         
           <IntroSection />
         </Box>
       </Box>

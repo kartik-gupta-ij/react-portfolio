@@ -33,9 +33,9 @@ const useStyles = createStyles((theme) => ({
     zIndex: -3,
   },
   blur: {
-    width: "100vw",
+    width: "100%",
     zIndex: -2,
-    height: "100vh",
+    height: "100%",
     position: "fixed",
     backdropFilter: "blur(10vmax)",
     top: 0,
@@ -79,7 +79,4 @@ export default function HoverAnmiations(prop: {
     </>
   );
 }
-// <div className={classes.box} >
-//  <div className={classes.blur} ref={ref}>
-//     {prop.children}
-//   </div>
+

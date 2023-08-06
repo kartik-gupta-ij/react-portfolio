@@ -229,9 +229,18 @@ export default function TableOfContentsFloating() {
                   <IconChevronRight size={rem(12)} stroke={1.5} />
                 </ThemeIcon>
               }
+              sx={{"& .mantine-List-itemWrapper":{
+               
+                alignItems: "center !important",
+         
+              }
+            
+              }}
+ 
             >
               {links[active].Description.map((item, index) => (
-                <List.Item key={index}>{item}</List.Item>
+                <List.Item              
+                key={index}>{item}</List.Item>
               ))}
             </List>
           </Grid.Col>
