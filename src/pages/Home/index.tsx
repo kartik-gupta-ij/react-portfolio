@@ -1,4 +1,5 @@
 import About from "@/components/AboutSection";
+import Blog from "@/components/BlogsSection";
 import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import HoverAnmiations from "@/components/HoverAnmiations";
@@ -54,7 +55,7 @@ export default function Home() {
           <About />
           <Experience/>
           <Project />
-         
+          <Blog/>
           <IntroSection />
         </Box>
       </Box>

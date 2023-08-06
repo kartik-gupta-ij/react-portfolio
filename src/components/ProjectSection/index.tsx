@@ -73,7 +73,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: "10px",
   },
   descrtionContainer: {
-    backgroundColor: "rgba(17, 34, 64, 0.9)",
+    backdropFilter: "blur(10vmax)",
     padding: "20px",
     borderRadius: "10px",
     position: "relative",
