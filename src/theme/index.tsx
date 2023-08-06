@@ -23,7 +23,8 @@ const myTheme: MantineThemeOverride = {
 
   other: {
     boxShadow: {
-      hoverBtn: `4px 4px 0 0 #C350C0`,
+      hoverBtn: `4px 4px 0 0 #C350C0 `,
+      hoverImage:`4px 4px 0 0 #505861`
     },
     transition: {
       hoverBtn: "all 0.25s cubic-bezier(0.645,0.045,0.355,1)",

@@ -30,11 +30,11 @@ const useStyles = createStyles((theme) => ({
         : " linear-gradient(to right, pink, blue)",
     animation: `${spin} 5s infinite`,
     opacity: theme.colorScheme === "dark" ? 0.6 : 0.4,
-    zIndex: -2,
+    zIndex: -3,
   },
   blur: {
     width: "100vw",
-    zIndex: -1,
+    zIndex: -2,
     height: "100vh",
     position: "fixed",
     backdropFilter: "blur(10vmax)",

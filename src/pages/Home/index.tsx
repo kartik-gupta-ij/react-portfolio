@@ -4,16 +4,13 @@ import Header from "@/components/Header";
 import HoverAnmiations from "@/components/HoverAnmiations";
 
 import IntroSection from "@/components/IntroSection";
+import Project from "@/components/ProjectSection";
 import { Box, createStyles } from "@mantine/core";
 import { useMouse } from "@mantine/hooks";
 
 const useStyles = createStyles(() => ({
   container: {
     display: "flex",
-    backgroundImage:
-      "linear-gradient(rgba(79,70,229,.2) 1px,transparent 0),linear-gradient(90deg,rgba(79,70,229,.2) 1px,transparent 0)",
-    backgroundSize: "24px 24px",
-    zIndex: 4,
   },
   innerContainer: {
     display: "flex",
@@ -42,6 +39,7 @@ export default function Home() {
           <IntroSection/>
           <About />
           <Experience/>
+          <Project />
           <IntroSection />
           <IntroSection />
         </Box>

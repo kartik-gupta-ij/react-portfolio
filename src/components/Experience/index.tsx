@@ -86,7 +86,7 @@ const useStyles = createStyles((theme) => ({
     minWidth: "100vw",
     justifyContent: "center",
     alignItems: "center",
-  },
+   },
   inner: {
     display: "flex",
     justifyContent: "space-between",

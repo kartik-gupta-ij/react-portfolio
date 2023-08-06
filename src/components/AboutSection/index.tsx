@@ -16,11 +16,7 @@ import image from "/pablita-man-face.gif";
 
 const useStyles = createStyles((theme) => ({
   container: {
-    display: "flex",
-    minHeight: "100vh",
-    minWidth: "100vw",
-    justifyContent: "center",
-    alignItems: "center",
+   padding: `calc(${theme.spacing.xl} * 2) 0`,
   },
   inner: {
     display: "flex",
