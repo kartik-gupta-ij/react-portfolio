@@ -196,7 +196,7 @@ export default function TableOfContentsFloating() {
                   transform: `translateY(${
                     active * LINK_HEIGHT + INDICATOR_OFFSET
                   }px)`,
-                  [theme.fn.smallerThan("md")]: {
+                  [theme.fn.smallerThan("sm")]: {
                     transform: `translateX(${
                       active * LINK_WIDTH + INDICATOR_OFFSET_X
                     }px)`,
