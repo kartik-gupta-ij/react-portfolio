@@ -15,7 +15,6 @@ import {
   IconSearch,
 } from "@tabler/icons-react";
 import { ActionIcon, Group, Text, rem } from "@mantine/core";
-
 const actions: SpotlightAction[] = [
   {
     group: "portfolio",
