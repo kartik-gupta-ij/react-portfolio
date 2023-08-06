@@ -1,5 +1,4 @@
 import {
-  BackgroundImage,
   Box,
   Container,
   Grid,
