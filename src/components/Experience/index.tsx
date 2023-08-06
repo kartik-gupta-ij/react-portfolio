@@ -16,7 +16,7 @@ import { IconChevronRight } from "@tabler/icons-react";
 const LINK_HEIGHT = 38;
 const INDICATOR_SIZE = 10;
 const INDICATOR_OFFSET = (LINK_HEIGHT - INDICATOR_SIZE) / 2;
-const LINK_WIDTH = 100;
+const LINK_WIDTH = 80;
 const INDICATOR_OFFSET_X = (LINK_WIDTH - INDICATOR_SIZE) / 2;
 
 
@@ -29,7 +29,6 @@ const useStyles = createStyles((theme) => ({
     lineHeight: rem(LINK_HEIGHT),
     fontSize: theme.fontSizes.sm,
     height: rem(LINK_HEIGHT),
-    
     borderLeft: `${rem(2)} solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2]
     }`,
@@ -41,9 +40,6 @@ const useStyles = createStyles((theme) => ({
           : theme.colors.gray[2]
       }`,
       width: rem(LINK_WIDTH),
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
     },
   },
 
@@ -57,9 +53,10 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     [theme.fn.smallerThan("sm")]: {
       display: "flex",
+      maxWidth: `calc(100vw - 2* ${theme.spacing.xl})`,
+      overflowX: "auto",
     },
-    maxWidth: "100vw",
-    overflowX: "auto",
+    
   },
 
   indicator: {
@@ -143,7 +140,7 @@ export default function TableOfContentsFloating() {
       ],
     },
     {
-      Company: "Qdrant2",
+      Company: "Qdrant1",
       link: "#usage",
       Role: "Web Developer Intern2",
       Duration: "May 2023 - Present",
