@@ -169,7 +169,6 @@ export default function Project() {
                   spacing={15}
                   className={classes.badgeBox}
                   position={index % 2 ? "left" : "right"}
-                  noWrap
                 >
                   {project.badges.map((badge) => (
                     <Badge
@@ -185,7 +184,7 @@ export default function Project() {
                   spacing={15}
                   className={classes.link}
                   position={index % 2 ? "left" : "right"}
-                  noWrap
+                  
                 >
                   <ActionIcon
                     variant="light"
