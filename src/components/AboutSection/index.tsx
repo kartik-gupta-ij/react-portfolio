@@ -55,11 +55,11 @@ export default function About() {
   return (
     <Box className={classes.container}>
       <Container>
-        <Grid className={classes.inner}>
-          <Grid.Col sm={4} className={classes.imageContainer} order={2}>
+        <Grid className={classes.inner} >
+          <Grid.Col sm={4} className={classes.imageContainer} orderSm={2}>
             <Image src={image} className={classes.image}/>
           </Grid.Col>
-          <Grid.Col sm={8} order={1}>
+          <Grid.Col sm={8} orderSm={1}>
             <Title className={classes.title}>About Me</Title>
             <Text mt={10}>
               Hello! My name is Kartik and I enjoy creating things that live on
@@ -83,7 +83,7 @@ export default function About() {
               Here are a few technologies I've been working with recently:
             </Text>
             <Grid>
-              <Grid.Col md={4}>
+              <Grid.Col  span={6} sm={4}>
                 <List
                   mt={20}
                   spacing="xs"
@@ -99,7 +99,7 @@ export default function About() {
                   <List.Item>TypeScript</List.Item>
                 </List>
               </Grid.Col>
-              <Grid.Col md={6}>
+              <Grid.Col span={6} sm={8}>
                 <List
                   mt={20}
                   spacing="xs"

@@ -41,7 +41,9 @@ const useStyles = createStyles((theme) => ({
           : theme.colors.gray[2]
       }`,
       width: rem(LINK_WIDTH),
-
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     },
   },
 
@@ -56,6 +58,8 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       display: "flex",
     },
+    maxWidth: "100vw",
+    overflowX: "auto",
   },
 
   indicator: {
@@ -113,15 +117,17 @@ export default function TableOfContentsFloating() {
   const [active, setActive] = useState(2);
 
   const links = [
+    
     {
       Company: "Qdrant",
       link: "#usage",
       Role: "Web Developer Intern",
       Duration: "May 2023 - Present",
       Description: [
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
       ],
     },
     {
@@ -130,9 +136,10 @@ export default function TableOfContentsFloating() {
       Role: "Web Developer Intern1",
       Duration: "May 2023 - Present",
       Description: [
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
       ],
     },
     {
@@ -141,9 +148,22 @@ export default function TableOfContentsFloating() {
       Role: "Web Developer Intern2",
       Duration: "May 2023 - Present",
       Description: [
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
-        "Worked on the frontend of the Qdrant project, a vector search engine. I worked on the frontend of the project, using React, Typescript, and Redux. I also worked on the backend, using Python and FastAPI.",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+      ],
+    },
+    {
+      Company: "Qdrant2",
+      link: "#usage",
+      Role: "Web Developer Intern2",
+      Duration: "May 2023 - Present",
+      Description: [
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
       ],
     },
   ];

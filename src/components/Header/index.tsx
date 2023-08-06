@@ -12,8 +12,6 @@ import {
 } from "@mantine/core";
 import {
   IconBrandTwitter,
-  IconSun,
-  IconMoonStars,
   IconBrandLinkedin,
   IconBrandGithub,
 } from "@tabler/icons-react";
@@ -107,7 +105,7 @@ export default function Header() {
   // const [opened, { toggle }] = useDisclosure(false);
   // const [active, setActive] = useState(links[0].link);
   const { classes } = useStyles();
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const { colorScheme, } = useMantineColorScheme();
   const dark = colorScheme === "dark";
   // const items = links.map((link) => (
   //   <a
@@ -153,14 +151,7 @@ export default function Header() {
           <ActionIcon variant="light" color="blue"  component="a" href="https://twitter.com/kartik_gupta_ij" target='_blank'>
             <IconBrandTwitter size="1.1rem" stroke={1.5} />
           </ActionIcon>
-          <ActionIcon
-            variant="light"
-            color={dark ? "yellow" : "blue"}
-            onClick={() => toggleColorScheme()}
-            title="Toggle color scheme"
-          >
-            {dark ? <IconSun size="1.1rem" /> : <IconMoonStars size="1.1rem" />}
-          </ActionIcon>
+      
         </Group>
       </Container>
     </MantineHeader>
