@@ -40,6 +40,8 @@ const useStyles = createStyles((theme) => ({
           : theme.colors.gray[2]
       }`,
       width: rem(LINK_WIDTH),
+      height: "100%",
+      marginTop: theme.spacing.sm,
     },
   },
 
@@ -74,6 +76,8 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       left: "auto",
       top: `calc(-${rem(INDICATOR_SIZE)} / 2 + ${rem(1)})`,
+      marginTop: theme.spacing.sm,
+
     },
   },
   container: {
