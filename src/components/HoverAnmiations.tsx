@@ -55,19 +55,19 @@ export default function HoverAnmiations(prop: {
     if (ref2.current) {
       const blob = ref2.current as any;
 
-      blob.style.left = `${prop.x}px`;
-      blob.style.top = `${prop.y}px`;
-      blob.style.transition = "all 0.6s ease-out";
+      // blob.style.left = `${prop.x}px`;
+      // blob.style.top = `${prop.y}px`;
+      // blob.style.transition = "all 0.6s ease-out";
 
 
       // not working in safari
-      // blob.animate(
-      //   {
-      //     left: `${prop.x}px`,
-      //     top: `${prop.y}px`,
-      //   },
-      //   { duration: 3000, fill: "forwards" }
-      // );
+      blob.animate(
+        {
+          left: `${prop.x}px`,
+          top: `${prop.y}px`,
+        },
+        { duration: 3000, fill: "forwards" }
+      );
     }
   }, [ref2, prop.x]);
 

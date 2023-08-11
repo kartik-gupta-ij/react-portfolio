@@ -12,8 +12,20 @@
       height: 100%;
       width: 100%;
     }
+    canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
   </style>
   <body>
+
+    <canvas   id="bg"></canvas>
+
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

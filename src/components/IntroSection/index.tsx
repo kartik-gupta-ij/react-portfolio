@@ -1,6 +1,6 @@
 import {
   createStyles,
-  Image,
+
   Container,
   Title,
   Button,
@@ -16,7 +16,7 @@ import {
   keyframes,
 } from "@mantine/core";
 import { IconStarFilled } from "@tabler/icons-react";
-import image from "/pablita-social-network-1.gif";
+
 import { spotlight } from "@mantine/spotlight";
 import { useEffect, useRef } from "react";
 
@@ -214,7 +214,7 @@ export default function HeroBullets() {
       <Container>
         <Grid className={classes.inner}>
           <Grid.Col sm={5} orderSm={2} className={classes.imageContainer}>
-            <Image src={image} className={classes.image} />
+            {/* <Image src={image} className={classes.image} /> */}
           </Grid.Col>
           <Grid.Col sm={7} orderSm={1}>
             <Text>Hi, There 👋 I’m</Text>

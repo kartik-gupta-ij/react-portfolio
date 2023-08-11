@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import HoverAnmiations from "@/components/HoverAnmiations";
 
+
 import IntroSection from "@/components/IntroSection";
 import Project from "@/components/ProjectSection";
 import { Box, createStyles } from "@mantine/core";
@@ -47,6 +48,7 @@ export default function Home() {
   }, []);
   return (
     <>
+
       <HoverAnmiations x={mousePos.x} y={mousePos.y} />
       <Box className={classes.container} >
         <Box className={classes.innerContainer}  >
