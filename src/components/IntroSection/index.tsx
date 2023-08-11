@@ -1,6 +1,6 @@
 import {
   createStyles,
-  Image,
+
   Container,
   Title,
   Button,
@@ -16,7 +16,7 @@ import {
   keyframes,
 } from "@mantine/core";
 import { IconStarFilled } from "@tabler/icons-react";
-import image from "/pablita-social-network-1.gif";
+
 import { spotlight } from "@mantine/spotlight";
 import { useEffect, useRef } from "react";
 
