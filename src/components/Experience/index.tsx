@@ -19,7 +19,6 @@ const INDICATOR_OFFSET = (LINK_HEIGHT - INDICATOR_SIZE) / 2;
 const LINK_WIDTH = 80;
 const INDICATOR_OFFSET_X = (LINK_WIDTH - INDICATOR_SIZE) / 2;
 
-
 const useStyles = createStyles((theme) => ({
   link: {
     ...theme.fn.focusStyles(),
@@ -58,7 +57,6 @@ const useStyles = createStyles((theme) => ({
       maxWidth: `calc(100vw - 2* ${theme.spacing.xl})`,
       overflowX: "auto",
     },
-    
   },
 
   indicator: {
@@ -77,7 +75,6 @@ const useStyles = createStyles((theme) => ({
       left: "auto",
       top: `calc(-${rem(INDICATOR_SIZE)} / 2 + ${rem(1)})`,
       marginTop: theme.spacing.sm,
-
     },
   },
   container: {
@@ -86,7 +83,7 @@ const useStyles = createStyles((theme) => ({
     minWidth: "100vw",
     justifyContent: "center",
     alignItems: "center",
-   },
+  },
   inner: {
     display: "flex",
     justifyContent: "space-between",
@@ -115,10 +112,9 @@ const useStyles = createStyles((theme) => ({
 
 export default function TableOfContentsFloating() {
   const { classes, cx } = useStyles();
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
 
   const links = [
-    
     {
       Company: "Qdrant",
       link: "#usage",
@@ -128,7 +124,7 @@ export default function TableOfContentsFloating() {
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       ],
     },
     {
@@ -140,7 +136,7 @@ export default function TableOfContentsFloating() {
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       ],
     },
     {
@@ -152,7 +148,7 @@ export default function TableOfContentsFloating() {
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       ],
     },
     {
@@ -164,7 +160,7 @@ export default function TableOfContentsFloating() {
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
         "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+        "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
       ],
     },
   ];
@@ -229,18 +225,14 @@ export default function TableOfContentsFloating() {
                   <IconChevronRight size={rem(12)} stroke={1.5} />
                 </ThemeIcon>
               }
-              sx={{"& .mantine-List-itemWrapper":{
-               
-                alignItems: "center !important",
-         
-              }
-            
+              sx={{
+                "& .mantine-List-itemWrapper": {
+                  alignItems: "center !important",
+                },
               }}
- 
             >
               {links[active].Description.map((item, index) => (
-                <List.Item              
-                key={index}>{item}</List.Item>
+                <List.Item key={index}>{item}</List.Item>
               ))}
             </List>
           </Grid.Col>

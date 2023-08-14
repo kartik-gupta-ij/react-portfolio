@@ -19,6 +19,7 @@
     "@vitejs/plugin-react-swc": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-parallax-tilt": "^1.7.158",
     "react-router-dom": "^6.14.2"
   },
   "devDependencies": {

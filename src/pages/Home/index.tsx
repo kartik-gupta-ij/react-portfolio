@@ -1,6 +1,7 @@
 import About from "@/components/AboutSection";
 import Blog from "@/components/BlogsSection";
 import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HoverAnmiations from "@/components/HoverAnmiations";
 
@@ -29,34 +30,31 @@ const useStyles = createStyles(() => ({
 
 export default function Home() {
   const { classes } = useStyles();
-  const [mousePos, setMousePos] = useState({x:0,y:0});
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (event:any) => {
+    const handleMouseMove = (event: any) => {
       setMousePos({ x: event.clientX, y: event.clientY });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener(
-        'mousemove',
-        handleMouseMove
-      );
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
   return (
     <>
       <HoverAnmiations x={mousePos.x} y={mousePos.y} />
-      <Box className={classes.container} >
-        <Box className={classes.innerContainer}  >
+      <Box className={classes.container}>
+        <Box className={classes.innerContainer}>
           <Header />
-          <IntroSection/>
-          <About />
-          <Experience/>
-          <Project />
-          <Blog/>
           <IntroSection />
+          <About />
+          <Experience />
+          <Project />
+          <Blog />
+          <Footer />
         </Box>
       </Box>
     </>
