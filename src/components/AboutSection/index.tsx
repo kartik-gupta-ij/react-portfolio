@@ -13,10 +13,9 @@ import {
 import { IconChevronRight } from "@tabler/icons-react";
 import image from "/pablita-man-face.gif";
 
-
 const useStyles = createStyles((theme) => ({
   container: {
-   padding: `calc(${theme.spacing.xl} * 2) 0`,
+    padding: `calc(${theme.spacing.xl} * 2) 0`,
   },
   inner: {
     display: "flex",
@@ -43,7 +42,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    },
+  },
 }));
 
 export default function About() {
@@ -51,41 +50,44 @@ export default function About() {
   return (
     <Box className={classes.container}>
       <Container>
-        <Grid className={classes.inner} >
+        <Grid className={classes.inner}>
           <Grid.Col sm={4} className={classes.imageContainer} orderSm={2}>
-            <Image src={image} className={classes.image}/>
+            <Image src={image} className={classes.image} />
           </Grid.Col>
           <Grid.Col sm={8} orderSm={1}>
             <Title className={classes.title}>About Me</Title>
             <Text mt={10}>
-              Hello! My name is Kartik and I enjoy creating things that live on
-              the internet. My interest in web development started back in 2018
-              when I decided to try editing custom Tumblr themes — turns out
-              hacking together a custom reblog button taught me a lot about HTML
-              & CSS!
+              From a pursuit of Electronics and Communication Engineering at the
+              University of Lucknow, I ventured into the realm of coding,
+              mastering languages like C++, Python, and JavaScript. This journey
+              led me to embrace web development, working with ReactJS,
+              ExpressJS, and more, ultimately shaping my path in the tech world.
             </Text>
             <Text mt={10}>
-              Fast-forward to today, and I've had the privilege of working at an
-              advertising agency, a start-up, a huge corporation, and a
-              student-led design studio. My main focus these days is building
-              accessible, inclusive products and digital experiences at
-              Upstatement for a variety of clients.
+              Proficient in C++, Python, and JavaScript, I've harnessed the
+              power of frameworks like ReactJS and ExpressJS. With a knack for
+              databases like MySQL and MongoDB, and wielding tools like Git and
+              VS Code, I've crafted a toolkit to bring ideas to digital life.
             </Text>
             <Text mt={10}>
-              I also recently launched a course that covers everything you need
-              to build a web app with the Spotify API using Node & React.
+              As a dedicated Google Summer of Code student developer, I'm
+              building an intuitive web interface for Qdrant, enabling
+              accessible data visualization and exploration. This dynamic
+              experience allows me to innovate at the crossroads of technology
+              and user-centric design, growing not just as a developer, but as a
+              visionary in the tech landscape.
             </Text>
             <Text mt={10}>
               Here are a few technologies I've been working with recently:
             </Text>
             <Grid>
-              <Grid.Col  span={6} sm={4}>
+              <Grid.Col span={6} sm={4}>
                 <List
                   mt={20}
                   spacing="xs"
                   size="sm"
                   icon={
-                    <ThemeIcon size={20} radius="xl" variant='outline'>
+                    <ThemeIcon size={20} radius="xl" variant="outline">
                       <IconChevronRight size={rem(12)} stroke={1.5} />
                     </ThemeIcon>
                   }
@@ -101,9 +103,9 @@ export default function About() {
                   spacing="xs"
                   size="sm"
                   icon={
-                    <ThemeIcon size={20} radius="xl" variant='outline'>
-                    <IconChevronRight size={rem(12)} stroke={1.5} />
-                  </ThemeIcon>
+                    <ThemeIcon size={20} radius="xl" variant="outline">
+                      <IconChevronRight size={rem(12)} stroke={1.5} />
+                    </ThemeIcon>
                   }
                 >
                   <List.Item>Python</List.Item>

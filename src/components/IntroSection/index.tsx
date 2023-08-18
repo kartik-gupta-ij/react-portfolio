@@ -250,8 +250,7 @@ export default function HeroBullets() {
               </Text>
             </Title>
             <Text mt="md" >
-              I’m a software engineer specializing in building (and occasionally
-              designing) exceptional digital experiences. Currently, I’m focused
+            I'm electronics engineering student with a strong passion for coding and web development. I'm on a constant journey to expand my horizons and create meaningful digital experiences. Currently, I’m focused
               on building accessible, human-centered products at{" "}
               <Anchor href="https://qdrant.tech/" target="_blank">
                 Qdrant
@@ -282,10 +281,10 @@ export default function HeroBullets() {
               }}
             >
               <List.Item>
-                <b>Web Devloper at Qdrant</b>
+                <b>Student Developer at Google Summer of Code'23 @Qdrant.</b>
               </List.Item>
               <List.Item>
-                <b>Member at Coding Club</b>
+                <b>Open Source Lead at Google Developer Student Club.</b>
               </List.Item>
               <List.Item>
                 <b>Student at Unversity of Lucknow</b>
