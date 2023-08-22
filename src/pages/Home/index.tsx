@@ -1,12 +1,10 @@
 import About from "@/components/AboutSection";
-import Blog from "@/components/BlogsSection";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HoverAnmiations from "@/components/HoverAnmiations";
 
 import IntroSection from "@/components/IntroSection";
-import Project from "@/components/ProjectSection";
 import { Box, createStyles } from "@mantine/core";
 import { useEffect, useState } from "react";
 
