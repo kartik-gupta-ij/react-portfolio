@@ -52,8 +52,8 @@ export default function Home() {
           <IntroSection />
           <About />
           <Experience />
-          <Project />
-          <Blog />
+          {/* <Project />
+          <Blog /> */}
           <Footer />
         </Box>
       </Box>
