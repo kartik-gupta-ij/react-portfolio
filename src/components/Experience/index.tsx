@@ -16,7 +16,7 @@ import { IconChevronRight } from "@tabler/icons-react";
 const LINK_HEIGHT = 38;
 const INDICATOR_SIZE = 10;
 const INDICATOR_OFFSET = (LINK_HEIGHT - INDICATOR_SIZE) / 2;
-const LINK_WIDTH = 80;
+const LINK_WIDTH = 100;
 const INDICATOR_OFFSET_X = (LINK_WIDTH - INDICATOR_SIZE) / 2;
 
 const useStyles = createStyles((theme) => ({
