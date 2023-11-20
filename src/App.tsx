@@ -5,12 +5,9 @@ import {
   SpotlightAction,
 } from "@mantine/spotlight";
 import {
-  IconArticle,
-  IconBook2,
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandTwitter,
-  IconDeviceIpadHorizontalCode,
   IconFileText,
   IconSearch,
 } from "@tabler/icons-react";
@@ -31,26 +28,7 @@ const actions: SpotlightAction[] = [
       });
     },
     icon: <IconFileText size="1.2rem" />,
-  },
-  {
-    title: "Dashboard",
-    description: "Get full information about current system status",
-    onTrigger: () => console.log("Dashboard"),
-    icon: <IconBook2 size="1.2rem" />,
-  },
-  {
-    title: "Documentation",
-    description: "Visit documentation to lean more about all features",
-    onTrigger: () => console.log("Documentation"),
-    icon: <IconDeviceIpadHorizontalCode size="1.2rem" />,
-  },
-  {
-    group: "Content",
-    title: "Blogs",
-    description: "Helpful blogs for trouble shooting and case studies",
-    onTrigger: () => console.log("Documentation"),
-    icon: <IconArticle size="1.2rem" />,
-  },
+  }
 ];
 
 function ActionsWrapper({ children }: { children: React.ReactNode }) {
